@@ -16,13 +16,16 @@
         nav {
             background: rgba(58,24,89,0.92);
             color: #fff;
-            padding: 1em 0;
+            padding: 0.5em 0;
             box-shadow: 0 2px 12px rgba(58,24,89,0.12);
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 10;
             border-radius: 0 0 18px 18px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a {
             color: #fff;
@@ -32,8 +35,10 @@
             transition: color 0.2s, background 0.2s;
             padding: 0.5em 1.2em;
             border-radius: 8px;
-            margin: 0 0.2em;
+            margin: 0.4em 0.5em;
             display: inline-block;
+            min-width: 110px;
+            text-align: center;
         }
         nav a:hover, nav a:focus {
             color: #fff;
@@ -81,7 +86,7 @@
             background: #b22222;
         }
         section {
-            background: rgba(255, 245, 255, 0.88); /* blanc rosé semi-transparent */
+            background: rgba(255, 245, 255, 0.88); /* meme fond */
             max-width: 700px;
             margin: 2em auto 2em auto;
             border-radius: 16px;

@@ -16,13 +16,16 @@
         nav {
             background: rgba(58,24,89,0.92);
             color: #fff;
-            padding: 1em 0;
+            padding: 0.5em 0;
             box-shadow: 0 2px 12px rgba(58,24,89,0.12);
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 10;
             border-radius: 0 0 18px 18px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a {
             color: #fff;
@@ -32,8 +35,10 @@
             transition: color 0.2s, background 0.2s;
             padding: 0.5em 1.2em;
             border-radius: 8px;
-            margin: 0 0.2em;
+            margin: 0.4em 0.5em;
             display: inline-block;
+            min-width: 110px;
+            text-align: center;
         }
         nav a:hover, nav a:focus {
             color: #fff;
@@ -41,15 +46,15 @@
             text-decoration: none;
         }
         section {
-            background: rgba(255, 245, 255, 0.85); /* blanc rosé semi-transparent */
+            background: rgba(255, 245, 255, 0.85); /* fond rosé ( je touche plus ) */
             margin: 2em auto;
             max-width: 700px;
             border-radius: 16px;
             box-shadow: 0 4px 24px rgba(58,24,89,0.08);
             padding: 2.5em 2em;
             transition: box-shadow 0.2s;
-            font-size: 1.25em;           /* Texte plus gros dans la section */
-            line-height: 1.7;            /* Plus d'espace entre les lignes */
+            font-size: 1.25em;           /* edit texte */
+            line-height: 1.7;            /* espace interligne */
         }
         section:hover {
             box-shadow: 0 8px 32px rgba(58,24,89,0.15);
@@ -58,16 +63,26 @@
             color: #b22222;
             margin-top: 0;
             letter-spacing: 1px;
-            font-size: 2em;              /* Titre plus gros */
+            font-size: 2em;              /* edit tittle 1 (*/
         }
         p {
             color: #333;
-            font-size: 1.15em;           /* Texte des paragraphes plus gros */
+            font-size: 1.15em;           /* edit texte 1 */
             line-height: 1.7;
+        }
+        .section-link-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+            margin-top: 2em;
+            padding-bottom: 1em;
         }
         .section-link {
             display: inline-block;
-            margin-top: 1em;
+            min-width: 140px;
+            text-align: center;
+            margin: 0;
             padding: 0.7em 1.5em;
             background: #3a1859;
             color: #fff;
@@ -75,21 +90,16 @@
             text-decoration: none;
             font-weight: bold;
             transition: background 0.2s;
+            box-sizing: border-box;
         }
         .section-link:hover {
             background: #b22222;
         }
-        /* Responsive burger menu */
+        /* menu burger test ( j'y arrive pas ff ) */
         .nav-toggle, .nav-label {
             display: none;
         }
         @media (max-width: 800px) {
-            body {
-                background: 
-                    linear-gradient(rgba(40,0,60,0.7), rgba(255,182,193,0.4)),
-                    url('https://images6.alphacoders.com/857/857052.jpg') left center / cover no-repeat;
-                min-height: 100vh;
-            }
             nav {
                 padding: 0.5em 0;
             }
@@ -135,4 +145,4 @@
             Si vous souhaitez des informations plus détaillées, des guides ou des précisions sur l’univers Touhou, je vous invite à consulter le 
             <a href="https://en.touhouwiki.net/wiki/Touhou_Wiki" target="_blank" style="color:#b22222;text-decoration:underline;">wiki Touhou</a> qui est très complet !
         </p>
-        <p style="text-align:center; color:#b22222; font-size:1.05em; margin-top:2em;">            Pour me contacter, vous pouvez passer par Discord : <strong>zadrip</strong>        </p>        <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; margin-top:2em;">            <a class="section-link" href="personnages.html">Personnages</a>            <a class="section-link" href="univers.html">Univers</a>            <a class="section-link" href="musiques.html">Musiques</a>            <a class="section-link" href="jeux.html">Jeux</a>            <a class="section-link" href="communaute.html">Communauté</a>        </div>    </section></body></html>
+        <p style="text-align:center; color:#b22222; font-size:1.05em; margin-top:2em;">            Pour me contacter, vous pouvez passer par Discord : <strong>zadrip</strong>        </p>        <div class="section-link-group">            <a class="section-link" href="univers.html">Univers</a>            <a class="section-link" href="personnages.html">Personnages</a>            <a class="section-link" href="musiques.html">Musiques</a>            <a class="section-link" href="jeux.html">Jeux</a>            <a class="section-link" href="communaute.html">Communauté</a>        </div>    </section></body></html>
