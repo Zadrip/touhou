@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Touhou - Musiques</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #3a1859 0%, #b22222 60%, #ffb6c1 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(58,24,89,0.92);
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0 2px 12px rgba(58,24,89,0.12);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 0 0 18px 18px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.13em;
+            transition: color 0.2s, background 0.2s;
+            padding: 0.5em 1.2em;
+            border-radius: 8px;
+            margin: 0 0.2em;
+            display: inline-block;
+        }
+        nav a:hover, nav a:focus {
+            color: #fff;
+            background: #b22222;
+            text-decoration: none;
+        }
+        h1 {
+            color: #b22222;
+            text-align: center;
+            margin-top: 1.5em;
+        }
+        .music-list {
+            max-width: 600px;
+            margin: 2em auto;
+            background: none;
+            border-radius: 16px;
+            box-shadow: none;
+            padding: 0;
+        }
+        .music-list li {
+            margin-bottom: 1.2em;
+            font-size: 1.1em;
+        }
+        .music-cover {
+            display: block;
+            margin: 1.5em auto 2em auto;
+            max-width: 640px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(58,24,89,0.15);
+        }
+        .back-link {
+            display: block;
+            margin: 2em auto 0 auto;
+            width: fit-content;
+            background: #3a1859;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .back-link:hover {
+            background: #b22222;
+        }
+        section {
+            background: rgba(255, 245, 255, 0.88); /* blanc rosé semi-transparent */
+            max-width: 700px;
+            margin: 2em auto 2em auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(58,24,89,0.08);
+            padding: 2.5em 2em;
+            transition: box-shadow 0.2s;
+        }
+        section:hover {
+            box-shadow: 0 8px 32px rgba(58,24,89,0.15);
+        }
+        @media (max-width: 800px) {
+            nav a {
+                margin: 0 1em;
+            }
+            .music-list {
+                padding: 1em;
+                margin: 1em;
+            }
+            section {
+                margin: 1em 1em;
+                padding: 1.5em 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="univers.html">Univers</a>
+        <a href="personnages.html">Personnages</a>
+        <a href="musiques.html">Musiques</a>
+        <a href="jeux.html">Jeux</a>
+        <a href="communaute.html">Communauté</a>
+    </nav>
+    <section style="background:rgba(255, 245, 255, 0.88);max-width:700px;margin:2em auto 2em auto;border-radius:16px;box-shadow:0 4px 24px rgba(58,24,89,0.08);padding:2.5em 2em;">
+        <h1 style="color:#b22222;text-align:center;margin-top:0;">Musiques de Touhou</h1>
+        <p style="max-width:650px;margin:1em auto 2em auto;text-align:center;font-size:1.15em;color:#444;">
+            Les musiques de Touhou sont composées par ZUN et sont devenues cultes dans le monde des jeux vidéo. Elles sont célèbres pour leur énergie, leur mélodie unique et inspirent de nombreux remixes et arrangements par la communauté. Découvrez ici quelques thèmes emblématiques, et n'hésitez pas à explorer davantage sur YouTube ou le wiki !
+        </p>
+        <img class="music-cover" src="https://i.imgur.com/hwZGEte.jpg" alt="Touhou Music">
+        <div class="music-list" style="background:none;box-shadow:none;padding:0;margin:0;">
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=VIop055eJhU" target="_blank" style="color:#b22222;font-weight:bold;text-decoration:none;">
+                        U.N. Owen Was Her?
+                    </a> (Touhou 6)<br>
+                    <em>Thème de Flandre Scarlet, très populaire et souvent remixé.</em>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=FtutLA63Cp8" target="_blank" style="color:#b22222;font-weight:bold;text-decoration:none;">
+                        Bad Apple!!
+                    </a> (Touhou 4, remix célèbre)<br>
+                    <em>Connu pour son clip en ombres chinoises et ses nombreux arrangements.</em>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=195XntreoMc" target="_blank" style="color:#b22222;font-weight:bold;text-decoration:none;">
+                        Necro Fantasia
+                    </a> (Touhou 7)<br>
+                    <em>Thème de Yukari Yakumo, apprécié pour sa complexité.</em>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=aJQ5HsXlPTo" target="_blank" style="color:#b22222;font-weight:bold;text-decoration:none;">
+                        Septette for the Dead Princess
+                    </a> (Touhou 6)<br>
+                    <em>Thème de Remilia Scarlet, mélodie emblématique de la série.</em>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=P7dLp2Eb7cg" target="_blank" style="color:#b22222;font-weight:bold;text-decoration:none;">
+                        Native Faith
+                    </a> (Touhou 10)<br>
+                    <em>Thème de Suwako Moriya, très dynamique et entraînant.</em>
+                </li>
+            </ul>
+            <p>Retrouvez des milliers de remixes et d'arrangements créés par la communauté sur YouTube et d'autres plateformes !</p>
+        </div>
+    </section>
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+</body>
+</html>

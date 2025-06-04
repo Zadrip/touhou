@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <meta charset="UTF-8">
+    <title>Touhou Chronicles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #3a1859 0%, #b22222 60%, #ffb6c1 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(58,24,89,0.92);
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0 2px 12px rgba(58,24,89,0.12);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 0 0 18px 18px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.13em;
+            transition: color 0.2s, background 0.2s;
+            padding: 0.5em 1.2em;
+            border-radius: 8px;
+            margin: 0 0.2em;
+            display: inline-block;
+        }
+        nav a:hover, nav a:focus {
+            color: #fff;
+            background: #b22222;
+            text-decoration: none;
+        }
+        section {
+            background: rgba(255, 245, 255, 0.85); /* blanc rosé semi-transparent */
+            margin: 2em auto;
+            max-width: 700px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(58,24,89,0.08);
+            padding: 2.5em 2em;
+            transition: box-shadow 0.2s;
+            font-size: 1.25em;           /* Texte plus gros dans la section */
+            line-height: 1.7;            /* Plus d'espace entre les lignes */
+        }
+        section:hover {
+            box-shadow: 0 8px 32px rgba(58,24,89,0.15);
+        }
+        h2 {
+            color: #b22222;
+            margin-top: 0;
+            letter-spacing: 1px;
+            font-size: 2em;              /* Titre plus gros */
+        }
+        p {
+            color: #333;
+            font-size: 1.15em;           /* Texte des paragraphes plus gros */
+            line-height: 1.7;
+        }
+        .section-link {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.7em 1.5em;
+            background: #3a1859;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .section-link:hover {
+            background: #b22222;
+        }
+        /* Responsive burger menu */
+        .nav-toggle, .nav-label {
+            display: none;
+        }
+        @media (max-width: 800px) {
+            body {
+                background: 
+                    linear-gradient(rgba(40,0,60,0.7), rgba(255,182,193,0.4)),
+                    url('https://images6.alphacoders.com/857/857052.jpg') left center / cover no-repeat;
+                min-height: 100vh;
+            }
+            nav {
+                padding: 0.5em 0;
+            }
+            .nav-toggle {
+                display: none;
+            }
+            .nav-label {
+                display: block;
+                cursor: pointer;
+                font-size: 2em;
+                color: #fff;
+                position: absolute;
+                top: 12px;
+                left: 18px;
+                z-index: 20;
+                background: none;
+                border: none;
+            }
+            nav .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(58,24,89,0.98);
+                border-radius: 0 0 18px 18px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 56px;
+                box-shadow: 0 4px 24px rgba(58,24,89,0.18);
+            }
+            .nav-toggle:checked + .nav-label + .nav-links {
+                display: flex;
+            }
+            nav a {
+                margin: 0.5em 0;
+                padding: 1em 0;
+                font-size: 1.15em;
+            }
+            section {                margin: 1em 1em;                padding: 1.5em 1em;            }            nav a {                margin: 0 1em;            }        }    </style></head><body>    <nav>        <a href="index.html">Accueil</a>        <a href="univers.html">Univers</a>        <a href="personnages.html">Personnages</a>        <a href="musiques.html">Musiques</a>        <a href="jeux.html">Jeux</a>        <a href="communaute.html">Communauté</a>    </nav>    <section>        <h2 style="text-align:center;">Bienvenue sur le site Touhou Chronicles !</h2>        <p style="font-size:1.18em;text-align:center;">            Dans un monde caché entre rêve et réalité, quelque part au Japon, existe Gensokyo : un sanctuaire mystique où humains, yōkai, dieux et fantômes coexistent. Là-bas, les incidents surnaturels pleuvent aussi souvent que les feuilles de cerisier, et une prêtresse armée de talismans affronte des vagues de magie pure sous forme de danses de lumière.        </p>        <p>            <strong>Touhou Project</strong>, c’est une série de jeux de tir (danmaku) créée par ZUN, mettant en scène des héroïnes aux pouvoirs impressionnants.<br>            Mais Touhou, c’est bien plus qu’un jeu :<br>            C’est un univers musical, mythologique, poétique, peuplé de yōkai espiègles, de déesses lunaires, de vampires millénaires… et de beaucoup de thé après les combats.        </p>        <p>            Un projet amateur devenu culte, avec une communauté immense de fans, de musiciens, d’artistes et de codeurs qui enrichissent l’univers sans fin.        </p>        <p style="text-align:center; color:#b22222; font-size:1.05em; margin-top:2em;">            Pour me contacter, vous pouvez passer par Discord : <strong>zadrip</strong>        </p>        <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; margin-top:2em;">            <a class="section-link" href="personnages.html">Personnages</a>            <a class="section-link" href="univers.html">Univers</a>            <a class="section-link" href="musiques.html">Musiques</a>            <a class="section-link" href="jeux.html">Jeux</a>            <a class="section-link" href="communaute.html">Communauté</a>        </div>    </section></body></html>

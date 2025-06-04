@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Touhou - Jeux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #3a1859 0%, #b22222 60%, #ffb6c1 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(58,24,89,0.92);
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0 2px 12px rgba(58,24,89,0.12);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 0 0 18px 18px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.13em;
+            transition: color 0.2s, background 0.2s;
+            padding: 0.5em 1.2em;
+            border-radius: 8px;
+            margin: 0 0.2em;
+            display: inline-block;
+        }
+        nav a:hover, nav a:focus {
+            color: #fff;
+            background: #b22222;
+            text-decoration: none;
+        }
+        h1 {
+            color: #b22222;
+            text-align: center;
+            margin-top: 1.5em;
+        }
+        .game-list {
+            max-width: 650px;
+            margin: 2em auto;
+            background: none;
+            border-radius: 16px;
+            box-shadow: none;
+            padding: 0;
+        }
+        .game-list li {
+            margin-bottom: 1.2em;
+            font-size: 1.1em;
+        }
+        .game-cover {
+            display: block;
+            margin: 1.5em auto 2em auto;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(58,24,89,0.10);
+        }
+        .back-link {
+            display: block;
+            margin: 2em auto 0 auto;
+            width: fit-content;
+            background: #3a1859;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .back-link:hover {
+            background: #b22222;
+        }
+        section {
+            background: rgba(255, 245, 255, 0.88); /* blanc rosé semi-transparent */
+            max-width: 700px;
+            margin: 2em auto 2em auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(58,24,89,0.08);
+            padding: 2.5em 2em;
+            transition: box-shadow 0.2s;
+        }
+        section:hover {
+            box-shadow: 0 8px 32px rgba(58,24,89,0.15);
+        }
+        @media (max-width: 800px) {
+            nav a {
+                margin: 0 1em;
+            }
+            .game-list {
+                padding: 1em;
+                margin: 1em;
+            }
+            section {
+                margin: 1em 1em;
+                padding: 1.5em 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="univers.html">Univers</a>
+        <a href="personnages.html">Personnages</a>
+        <a href="musiques.html">Musiques</a>
+        <a href="jeux.html">Jeux</a>
+        <a href="communaute.html">Communauté</a>
+    </nav>
+    <section>
+        <h1 style="color:#b22222;text-align:center;margin-top:0;">Jeux Touhou</h1>
+        <img class="game-cover" src="img/game.png" alt="Touhou Game Cover">
+        <div class="game-list">
+            <ul>
+                <li>
+                    <strong>Embodiment of Scarlet Devil (Touhou 6)</strong><br>
+                    Premier jeu Windows de la série, introduction de nombreux personnages emblématiques.
+                </li>
+                <li>
+                    <strong>Perfect Cherry Blossom (Touhou 7)</strong><br>
+                    Connu pour ses mécaniques de scoring et ses personnages populaires comme Yuyuko et Youmu.
+                </li>
+                <li>
+                    <strong>Imperishable Night (Touhou 8)</strong><br>
+                    Système de duo de personnages et multiples fins selon les choix du joueur.
+                </li>
+                <li>
+                    <strong>Phantasmagoria of Flower View (Touhou 9)</strong><br>
+                    Jeu de duel de tirs, jouable à deux, avec de nombreux personnages jouables.
+                </li>
+                <li>
+                    <strong>Mountain of Faith (Touhou 10)</strong><br>
+                    Introduction de nouveaux personnages et d'une nouvelle région, Moriya.
+                </li>
+                <li>
+                    <strong>Subterranean Animism (Touhou 11)</strong><br>
+                    Exploration des souterrains de Gensokyo, avec des mécaniques de partenaires.
+                </li>
+                <li>
+                    <strong>Undefined Fantastic Object (Touhou 12)</strong><br>
+                    Système d'objets à collecter et nouveaux personnages célestes.
+                </li>
+                <li>
+                    <strong>Ten Desires (Touhou 13)</strong><br>
+                    Introduction du système de "trance" et de nouveaux personnages issus de la mythologie japonaise.
+                </li>
+                <li>
+                    <strong>Double Dealing Character (Touhou 14)</strong><br>
+                    Les héroïnes peuvent choisir d'utiliser ou non leur arme, influençant l'histoire.
+                </li>
+                <li>
+                    <strong>Legacy of Lunatic Kingdom (Touhou 15)</strong><br>
+                    Réputé pour sa difficulté et ses mécaniques uniques.
+                </li>
+                <li>
+                    <strong>Hidden Star in Four Seasons (Touhou 16)</strong><br>
+                    Mécanique de changement de saisons et nouveaux personnages.
+                </li>
+                <li>
+                    <strong>Wily Beast and Weakest Creature (Touhou 17)</strong><br>
+                    Les héroïnes sont accompagnées d'esprits animaux, modifiant leur gameplay.
+                </li>
+                <li>
+                    <strong>Unconnected Marketeers (Touhou 18)</strong><br>
+                    Système de cartes à collectionner qui modifient les capacités du joueur.
+                </li>
+            </ul>
+            <p>Il existe aussi de nombreux fangames et spin-offs officiels, explorant d'autres genres comme le combat, le puzzle ou l'aventure !</p>
+        </div>
+    </section>
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+</body>
+</html>
