@@ -14,15 +14,21 @@
             min-height: 100vh;
         }
         nav {
-            background: rgba(58,24,89,0.92);
-            color: #fff;
-            padding: 1em 0;
-            box-shadow: 0 2px 12px rgba(58,24,89,0.12);
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            border-radius: 0 0 18px 18px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            align-items:center;
+            background:rgba(58,24,89,0.92);
+            color:#fff;
+            padding:0.5em 0;
+            box-shadow:0 2px 12px rgba(58,24,89,0.12);
+            position:sticky;
+            top:0;
+            z-index:10;
+            border-radius:0 0 18px 18px;
+            width:100vw;
+            margin-left:calc(-1 * (100vw - 100%) / 2);
+            box-sizing:border-box;
         }
         nav a {
             color: #fff;
@@ -32,7 +38,9 @@
             transition: color 0.2s, background 0.2s;
             padding: 0.5em 1.2em;
             border-radius: 8px;
-            margin: 0 0.2em;
+            margin: 0.4em 0.5em;
+            min-width: 110px;
+            text-align: center;
             display: inline-block;
         }
         nav a:hover, nav a:focus {
@@ -89,16 +97,21 @@
         }
         @media (max-width: 800px) {
             nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 0.5em 0;
+                flex-direction: column;
+                align-items: stretch;
             }
             nav a {
-                margin: 0.4em 0.5em;
-                display: inline-block;
-                min-width: 110px;
+                margin: 0.4em 0;
+                display: block;
+                width: calc(100% - 1em);
                 text-align: center;
+                padding: 0.5em 1.2em;
+                font-size: 1.13em;
+            }
+            nav button {
+                margin: 0.4em auto 0.4em auto;
+                width: calc(100% - 1em);
+                justify-content: center;
             }
             .univers-container {
                 padding: 1.2em 0.5em;
@@ -118,6 +131,10 @@
         <a href="musiques.html">Musiques</a>
         <a href="jeux.html">Jeux</a>
         <a href="communaute.html">Communauté</a>
+        <button id="theme-toggle" aria-label="Changer le thème" style="margin-left:1em; background:rgba(255,255,255,0.93); color:#3a1859; border:none; border-radius:8px; padding:0.5em 1.2em; font-weight:bold; cursor:pointer; transition:background 0.2s; display:flex; align-items:center; gap:0.5em;">
+            <span id="theme-icon" style="font-size:1.2em;">🌙</span>
+            <span id="theme-label">Mode sombre</span>
+        </button>
     </nav>
     <div class="univers-container">
         <h1>L'univers de Touhou</h1>
@@ -151,5 +168,70 @@
         </p>
     </div>
     <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <script>
+const toggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const themeLabel = document.getElementById('theme-label');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) setDark();
+toggleBtn.onclick = function() {
+    if (document.body.classList.toggle('dark-theme')) {
+        setDark();
+        localStorage.setItem('theme', 'dark');
+    } else {
+        setLight();
+        localStorage.setItem('theme', 'light');
+    }
+};
+function setDark() {
+    document.body.classList.add('dark-theme');
+    themeIcon.textContent = '☀️';
+    themeLabel.textContent = 'Mode clair';
+    toggleBtn.style.background = 'rgba(40,24,58,0.93)';
+    toggleBtn.style.color = '#ffb6c1';
+    document.body.style.background = 'linear-gradient(120deg, #1a1029 0%, #222 60%, #3a1859 100%)';
+    document.querySelector('.univers-container').style.background = 'rgba(40,24,58,0.85)';
+    document.querySelector('.univers-container').style.color = '#eee';
+}
+function setLight() {
+    document.body.classList.remove('dark-theme');
+    themeIcon.textContent = '🌙';
+    themeLabel.textContent = 'Mode sombre';
+    toggleBtn.style.background = 'rgba(255,255,255,0.93)';
+    toggleBtn.style.color = '#3a1859';
+    document.body.style.background = 'linear-gradient(120deg, #3a1859 0%, #b22222 60%, #ffb6c1 100%)';
+    document.querySelector('.univers-container').style.background = 'rgba(255,245,255,0.88)';
+    document.querySelector('.univers-container').style.color = '';
+}
+</script>
+
+<style>
+body.dark-theme {
+    color: #e7e7ef;
+}
+body.dark-theme .univers-container {
+    background: rgba(32, 18, 40, 0.93) !important;
+    color: #e7e7ef;
+}
+body.dark-theme h1,
+body.dark-theme h2 {
+    color: #ffb6c1;
+}
+body.dark-theme a {
+    color: #ffb6c1;
+}
+body.dark-theme p, body.dark-theme ul, body.dark-theme li {
+    color: #e7e7ef;
+}
+body.dark-theme .back-link {
+    background: #2d1a3a;
+    color: #fff;
+}
+body.dark-theme .back-link:hover {
+    background: #b22222;
+    color: #fff;
+}
+</style>
 </body>
 </html>
